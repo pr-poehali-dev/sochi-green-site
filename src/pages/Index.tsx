@@ -81,8 +81,13 @@ const Index = () => {
       {/* Hero Section */}
       {activeSection === 'home' && (
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-ocean via-forest-light to-ocean opacity-80"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzBoLTZWMGg2djMwem0tMTIgMGgtNlYwaDZ2MzB6bTI0IDBoLTZWMGg2djMweiIvPjwvZz48L2c+PC9zdmc+')] opacity-10"></div>
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/img/7813b3d8-5777-492b-ae72-bbf69df10b02.jpg)'
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/40"></div>
           
           <div className="relative z-10 text-center text-white px-4">
             <div className="flex items-center justify-center mb-6 space-x-4">
