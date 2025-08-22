@@ -182,7 +182,14 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {attractions.map((attraction, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="h-48 bg-gradient-to-br from-forest-light to-forest"></div>
+                  <div className="h-48 bg-gradient-to-br from-forest-light to-forest bg-cover bg-center"
+                       style={{
+                         backgroundImage: attraction.name === 'Роза Хутор' 
+                           ? 'url(/img/de8f9a6a-a677-4e05-b134-3de43b8982d7.jpg)'
+                           : attraction.name === 'Олимпийский парк'
+                           ? 'url(/img/fa7cca18-f658-453d-b0e6-8b46e9b9fe13.jpg)'
+                           : 'url(/img/112a309c-c728-4811-8ffd-3158696f4b95.jpg)'
+                       }}></div>
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <CardTitle className="font-montserrat text-forest">{attraction.name}</CardTitle>
