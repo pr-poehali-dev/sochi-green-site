@@ -141,7 +141,14 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {beaches.map((beach, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="h-48 bg-gradient-to-br from-ocean-light to-ocean"></div>
+                  <div className="h-48 bg-gradient-to-br from-ocean-light to-ocean bg-cover bg-center"
+                       style={{
+                         backgroundImage: beach.name === 'Центральный пляж' 
+                           ? 'url(/img/fcb18424-ba09-48b5-b874-b4c6ee22086b.jpg)'
+                           : beach.name === 'Ривьера'
+                           ? 'url(/img/f6dd6682-23c5-4c4d-a833-9ab76ebf8349.jpg)'
+                           : 'url(/img/56cbcc39-51e6-4001-995a-8d4d75f0b849.jpg)'
+                       }}></div>
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <CardTitle className="font-montserrat text-forest">{beach.name}</CardTitle>
